@@ -12,7 +12,6 @@ export const Dashboard = ({ setCurrentView }) => {
 
   return (
     <div className="p-6 md:p-10 max-w-7xl mx-auto bg-slate-50 min-h-screen">
-      {/* Saludo y Cabecera */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>
           <h1 className="text-3xl font-black text-slate-900">Dashboard General</h1>
@@ -23,7 +22,7 @@ export const Dashboard = ({ setCurrentView }) => {
         </div>
       </div>
 
-      {/* Grid Superior: Métricas Estilo Tarjeta Moderna */}
+      {/* Grid Superior */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
         <div className="bg-white p-6 rounded-3xl shadow-xs border border-slate-100 flex items-center justify-between">
           <div>
@@ -58,10 +57,10 @@ export const Dashboard = ({ setCurrentView }) => {
         </div>
       </div>
 
-      {/* Grid Principal: Accesos Rápidos y Widgets Informativos */}
+      {/* Grid Principal */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        {/* Accesos Rápidos (2 columnas) */}
+        {/* Accesos Rápidos */}
         <div className="md:col-span-2 bg-white p-8 rounded-3xl shadow-xs border border-slate-100">
           <h3 className="text-xl font-bold text-slate-800 mb-6">Módulos de Gestión</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -111,7 +110,7 @@ export const Dashboard = ({ setCurrentView }) => {
           </div>
         </div>
 
-        {/* Widget lateral estilo "Daily Tip" de las referencias */}
+        {/* Widget lateral */}
         <div className="bg-gradient-to-br from-purple-600 to-indigo-700 text-white p-8 rounded-3xl shadow-lg flex flex-col justify-between">
           <div>
             <span className="bg-purple-500/40 text-purple-100 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">

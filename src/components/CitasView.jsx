@@ -69,7 +69,6 @@ export const CitasView = () => {
     }
   };
 
-  // Función auxiliar para buscar el nombre del paciente por ID
   const getNombrePaciente = (id) => {
     const paciente = pacientes.find(p => p.id === id);
     return paciente ? paciente.nombre : 'Paciente desconocido';

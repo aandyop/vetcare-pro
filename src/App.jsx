@@ -14,7 +14,7 @@ import { ReportesView } from './components/ReportesView';
 function App() {
   const [currentView, setCurrentView] = useState('landing');
 
-  // Vistas Públicas (Landing, Servicios, Clínica, Reseñas) usan el Navbar superior
+  // Vistas Públicas
   const publicViews = ['landing', 'servicios', 'clinica', 'resenas'];
   const isPublicView = publicViews.includes(currentView);
 
@@ -32,7 +32,7 @@ function App() {
     );
   }
 
-  // Vistas Internas del Sistema (Dashboard, Pacientes, Citas, etc.) usan el Sidebar izquierdo
+  // Vistas Internas del Sistema
   return (
     <div className="min-h-screen bg-slate-50 flex font-sans text-slate-800">
       <Sidebar currentView={currentView} setCurrentView={setCurrentView} />

@@ -42,23 +42,23 @@ export const PacientesView = () => {
   // 2. Abrir modal (si recibe paciente es para editar, si es null es para crear)
   const handleOpenModal = (paciente = null) => {
     if (paciente) {
-      setFormValues(paciente); // Precarga los datos en el formulario
+      setFormValues(paciente);
     } else {
-      reset(); // Limpia el formulario
+      reset();
     }
     openModal(paciente);
   };
 
-  // 3. Manejar el envío del formulario (Crear o Editar)
+  // 3. Manejar el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       if (modalData) {
-        // Actualizar registro existente (PUT al Backend)
+        // Actualizar registro existente
         const updated = await request(`http://localhost:5000/pacientes/${modalData.id}`, 'PUT', formValues);
         dispatch(updatePaciente(updated));
       } else {
-        // Crear nuevo registro (POST al Backend)
+        // Crear nuevo registro
         const newPaciente = { ...formValues, id: Date.now().toString() };
         const created = await request('http://localhost:5000/pacientes', 'POST', newPaciente);
         dispatch(addPaciente(created));
@@ -70,7 +70,7 @@ export const PacientesView = () => {
     }
   };
 
-  // 4. Eliminar registro (DELETE al Backend)
+  // 4. Eliminar registro
   const handleDelete = async (id) => {
     if (window.confirm('¿Estás seguro de eliminar este paciente?')) {
       try {
@@ -82,7 +82,6 @@ export const PacientesView = () => {
     }
   };
 
-  // Filtrado optimizado utilizando el hook useDebounce
   const pacientesFiltrados = pacientes.filter(p => 
     p.nombre.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
     p.especie.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
@@ -166,7 +165,7 @@ export const PacientesView = () => {
         </table>
       </div>
 
-      {/* Modal para Formulario (Crear / Editar) */}
+      {/* Modal para Formulario */}
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 transform transition-all">

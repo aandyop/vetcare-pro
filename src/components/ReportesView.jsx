@@ -2,11 +2,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 export const ReportesView = () => {
-  // Extraemos la información del estado global
   const citas = useSelector((state) => state.citas.items);
   const inventario = useSelector((state) => state.inventario.items);
 
-  // Cálculos analíticos basados en Redux
   const valorTotalInventario = inventario.reduce((acc, item) => acc + (Number(item.stock) * Number(item.precio)), 0);
   
   const citasCompletadas = citas.filter(c => c.estado === 'Completada').length;

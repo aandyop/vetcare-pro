@@ -10,7 +10,7 @@ export const ClinicaPage = ({ setCurrentView }) => {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
-      {/* Banner Principal */}
+      {/* Banner */}
       <section className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <span className="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
@@ -42,7 +42,7 @@ export const ClinicaPage = ({ setCurrentView }) => {
         </div>
       </section>
 
-      {/* Galería de Instalaciones */}
+      {/* Galería */}
       <section className="bg-white border-y border-slate-100 py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-xl mx-auto mb-12">
