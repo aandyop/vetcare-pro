@@ -1,0 +1,60 @@
+{
+  "pacientes": [
+    {
+      "id": "1",
+      "nombre": "Max",
+      "especie": "Perro",
+      "raza": "Golden Retriever",
+      "edad": 3,
+      "propietario": "Carlos Gómez"
+    },
+    {
+      "id": "2",
+      "nombre": "Luna",
+      "especie": "Gato",
+      "raza": "Siamés",
+      "edad": 2,
+      "propietario": "Ana Torres"
+    }
+  ],
+  "citas": [
+    {
+      "id": "1",
+      "pacienteId": "1",
+      "fecha": "2026-11-10",
+      "motivo": "Vacunación anual",
+      "estado": "Completada"
+    },
+    {
+      "pacienteId": "2",
+      "fecha": "2026-11-05",
+      "motivo": "Desparacitación",
+      "estado": "Pendiente",
+      "id": "ILh0x9LbVRk"
+    }
+  ],
+  "inventario": [
+    {
+      "id": "1",
+      "nombreProducto": "Vacuna Antirrábica",
+      "categoria": "Biológicos",
+      "stock": 45,
+      "precio": 15.5
+    },
+    {
+      "id": "2",
+      "nombreProducto": "Desparasitante Oral",
+      "categoria": "Farmacia",
+      "stock": "6",
+      "precio": 8
+    },
+    {
+      "nombreProducto": "Vacuna Antirrábica",
+      "categoria": "Farmacia",
+      "stock": "20",
+      "precio": "4",
+      "id": "BTo0gL7AN7k"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
