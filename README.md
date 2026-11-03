@@ -1,16 +1,55 @@
-# React + Vite
+# 🐾 VetCare Pro - Sistema de Gestión Veterinaria
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+VetCare Pro es un sistema moderno y completo de administración para clínicas veterinarias, desarrollado con tecnologías web actuales para garantizar una experiencia rápida, fluida y eficiente tanto para el personal médico como para los clientes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologías Utilizadas
+- **Frontend:** React, Vite, Tailwind CSS.
+- **Estado Global:** Redux Toolkit.
+- **Backend Local:** JSON Server (simulación de API REST).
+- **Control de Versiones:** Git y GitHub.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📋 Módulos Principales
+1. **Landing Page & Vistas Públicas:** Páginas de inicio, catálogo de servicios, información de la clínica y opiniones/reseñas de clientes.
+2. **Dashboard:** Panel de control con métricas generales del sistema.
+3. **Pacientes:** Gestión de expedientes clínicos (CRUD completo) con búsqueda optimizada en tiempo real mediante `useDebounce`.
+4. **Citas Médicas:** Administración y control de la agenda diaria.
+5. **Inventario:** Control de stock farmacéutico y productos veterinarios.
+6. **Reportes:** Estadísticas analíticas de operaciones y finanzas.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Guía de Instalación y Ejecución Local
+
+Sigue estos pasos para poner en marcha el proyecto en tu entorno de desarrollo:
+
+### 1. Clonar el repositorio
+```bash
+git clone [https://github.com/TU_USUARIO/vetcare-pro.git](https://github.com/TU_USUARIO/vetcare-pro.git)
+cd vetcare-pro
+```
+
+### 2. Instalar dependencias
+Descarga todos los módulos necesarios (incluyendo Vite, React y dependencias del sistema):
+
+```bash
+npm install
+```
+
+### 3. Ejecutar el Backend (JSON Server)
+Inicia la base de datos local basada en el archivo db.json:
+
+```bash
+npm run backend
+(El servidor se iniciará en http://localhost:5000)
+```
+
+### 4. Ejecutar el Frontend (Vite)
+Abre una segunda terminal en la misma carpeta del proyecto y arranca el entorno de desarrollo:
+
+```bash
+npm run dev
+```
