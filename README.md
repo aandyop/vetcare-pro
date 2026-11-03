@@ -22,7 +22,7 @@ VetCare Pro es un sistema moderno y completo de administración para clínicas v
 
 ---
 
-## Guía de Instalación y Ejecución Local
+## Guía de Instalación y Ejecución Local 
 
 Sigue estos pasos para poner en marcha el proyecto en tu entorno de desarrollo:
 
